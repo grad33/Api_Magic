@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<CardChunk> call, Response<CardChunk> response) {
                 if (response.isSuccessful()) {
-                    List<Card> cards = response.body().results;
+                    List<Card> cards = response.body().cards;
                     if(cards != null) {  // add null check
                         _cards.addAll(cards);
                         for (Card card : cards) {

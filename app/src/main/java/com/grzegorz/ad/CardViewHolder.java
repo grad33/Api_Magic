@@ -8,26 +8,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class CardViewHolder extends RecyclerView.ViewHolder {
 
-    private final TextView _speciesNameTextView;
-    private final CardAdapter.OnSpeciesClickListener _onSpeciesClickListener;
-    private Card _species;
+    private final TextView _cardNameTextView;
+    private final CardAdapter.OnCardClickListener _onCardClickListener;
+    private Card _card;
 
-    public CardViewHolder(@NonNull View itemView, CardAdapter.OnSpeciesClickListener _onSpeciesClickListener) {
+    public CardViewHolder(@NonNull View itemView, CardAdapter.OnCardClickListener _onCardClickListener) {
         super(itemView);
-        _speciesNameTextView = itemView.findViewById(R.id.species_name);
-        this._onSpeciesClickListener = _onSpeciesClickListener;
-        _speciesNameTextView.setOnClickListener(new View.OnClickListener() {
+        _cardNameTextView = itemView.findViewById(R.id.card_name);
+        this._onCardClickListener = _onCardClickListener;
+        _cardNameTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (_species != null) {
-                    _onSpeciesClickListener.onSpeciesClick(_species);
+                if (_card != null) {
+                    _onCardClickListener.onCardClick(_card);
                 }
             }
         });
     }
 
-    public void bind(Card species) {
-        _species = species;
-        _speciesNameTextView.setText(species.name);
+    public void bind(Card card) {
+        _card = card;
+        _cardNameTextView.setText(card.name);
     }
 }

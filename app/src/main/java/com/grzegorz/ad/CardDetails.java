@@ -4,7 +4,6 @@ import java.net.URI;
 import java.util.List;
 
 public class CardDetails {
-
     public class FlavorTextEntry {
 
         public class Language {

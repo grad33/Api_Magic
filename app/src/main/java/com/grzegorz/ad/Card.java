@@ -1,31 +1,19 @@
 package com.grzegorz.ad;
 
+import java.net.URI;
 import java.util.List;
 
 
 public class Card{
     public String name;
-    public String imageUrl;
+    public URI imageUrl;
 
-    public Card(String name, String imageUrl) {
-        this.name = name;
-        this.imageUrl = imageUrl;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    @Override
+    public String toString() {
+        return "Species{" +
+                "name='" + name + '\'' +
+                ", url=" + imageUrl +
+                '}';
     }
 
 }

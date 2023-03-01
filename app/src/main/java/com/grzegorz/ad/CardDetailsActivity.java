@@ -25,7 +25,7 @@ public class CardDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_species_details);
+        setContentView(R.layout.activity_card_details);
 
         Intent intent = getIntent();
         String cardName = intent.getStringExtra(NAME_KEY);
@@ -45,11 +45,11 @@ public class CardDetailsActivity extends AppCompatActivity {
             public void onResponse(Call<CardDetails> call, Response<CardDetails> response) {
                 if (response.isSuccessful()) {
                     CardDetails cardDetails = response.body();
-                    TextView speciesDetailNameTextView = findViewById(R.id.species_detail_name);
-                    speciesDetailNameTextView.setText(cardDetails.name);
+                    TextView cardDetailNameTextView = findViewById(R.id.card_detail_name);
+                    cardDetailNameTextView.setText(cardDetails.name);
                     if (cardDetails.flavorTextEntries != null && !cardDetails.flavorTextEntries.isEmpty()) {
-                        TextView speciesDetailDescriptionTextView = findViewById(R.id.species_detail_description);
-                        speciesDetailDescriptionTextView.setText(cardDetails.flavorTextEntries.get(0).flavorText);
+                        TextView cardDetailDescriptionTextView = findViewById(R.id.card_detail_description);
+                        cardDetailDescriptionTextView.setText(cardDetails.flavorTextEntries.get(0).flavorText);
                     }
                 } else {
                     Log.e(TAG, response.errorBody().toString());

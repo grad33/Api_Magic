@@ -10,17 +10,12 @@ import retrofit2.http.Query;
 
 public interface MagicService {
     @GET("cards")
-    Call<List<Card>> getAllCards();
+    Call<CardChunk> listCards(
+            @Query("page") int page,
+            @Query("pageSize") int pageSize);
 
     @GET("cards/{id}")
-    Call<Card> getCardById(@Path("id") int id);
+    Call<CardDetails> cardDetails(@Path("id") String id);
 
-    @GET("pokemon-species")
-    Call<CardChunk> listSpecies(
-            @Query("offset") int offset,
-            @Query("limit") int limit);
-
-
-    @GET("pokemon-species/{name}")
-    Call<CardDetails> cardDetails(@Path("name") String name);
 }
+

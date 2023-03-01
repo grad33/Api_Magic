@@ -8,4 +8,5 @@ public class CardChunk {
     public URI next;
     public URI previous;
     public List<Card> results;
+
 }

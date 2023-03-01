@@ -10,11 +10,12 @@ public class Card{
 
     @Override
     public String toString() {
-        return "Species{" +
+        return "Card{" +
                 "name='" + name + '\'' +
-                ", url=" + imageUrl +
+                ", imageUrl=" + imageUrl +
                 '}';
     }
+
 
 }
 

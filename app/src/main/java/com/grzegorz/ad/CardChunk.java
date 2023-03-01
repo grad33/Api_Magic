@@ -7,6 +7,6 @@ public class CardChunk {
     public int count;
     public URI next;
     public URI previous;
-    public List<Card> results;
+    public List<Card> cards;
 
 }

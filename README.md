@@ -7,3 +7,5 @@ Practica realizada unicamente por Grzegorz Artur Dryka
 Inicial: no conseguia arrancar
 
 1.1:inica pero no mostrar nada(menu vacio)
+
+1.2:inicia y muestra rows(no funcionan detalles aun)

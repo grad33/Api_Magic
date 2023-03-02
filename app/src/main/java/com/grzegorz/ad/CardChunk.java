@@ -4,6 +4,10 @@ import java.net.URI;
 import java.util.List;
 
 public class CardChunk {
-    public List<Card>  cards;
+
+    public int count;
+    public URI next;
+    public URI previous;
+    public List<Card> cards;
 
 }

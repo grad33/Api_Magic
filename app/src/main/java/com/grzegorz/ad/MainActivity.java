@@ -56,9 +56,11 @@ public class MainActivity extends AppCompatActivity {
             public void onCardClick(Card card) {
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, CardDetailsActivity.class);
-                intent.putExtra(CardDetailsActivity.NAME_KEY, card.name);
+                intent.putExtra(CardDetailsActivity.CARD_KEY, card.getId());
                 startActivity(intent);
             }
+
+
         });
         mRecyclerView.setAdapter(_adapter);
 
@@ -80,12 +82,18 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<CardChunk> call, Response<CardChunk> response) {
                 if (response.isSuccessful()) {
                     List<Card> cards = response.body().cards;
-                    if(cards != null) {  // add null check
-                        _cards.addAll(cards);
+                    if (cards != null) {
+                        List<Card> filteredCards = new ArrayList<>();
                         for (Card card : cards) {
+                            if (card.imageUrl != null) {
+                                filteredCards.add(card);
+                            }
+                        }
+                        _cards.addAll(filteredCards);
+                        for (Card card : filteredCards) {
                             Log.i(TAG, card.toString());
                         }
-                        _adapter.notifyItemRangeInserted(page,pageSize);
+                        _adapter.notifyItemRangeInserted(_page, pageSize);
                         _page += pageSize;
                     }
                 } else {
@@ -93,10 +101,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-        @Override
-        public void onFailure(Call<CardChunk> call, Throwable t) {
-            Log.e(TAG, t.getLocalizedMessage());
+            @Override
+            public void onFailure(Call<CardChunk> call, Throwable t) {
+                Log.e(TAG, t.getLocalizedMessage());
             }
-        });
+            });
     }
 }

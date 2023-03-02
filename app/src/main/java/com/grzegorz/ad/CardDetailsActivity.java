@@ -20,7 +20,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class CardDetailsActivity extends AppCompatActivity {
 
     private static final String TAG = CardDetailsActivity.class.getName();
-    public final static String NAME_KEY = "NAME";
+    public final static String CARD_KEY = "cardId";
+    public final static String CARD_DESCRIPTION_KEY = "card_description_key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class CardDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_card_details);
 
         Intent intent = getIntent();
-        String cardName = intent.getStringExtra(NAME_KEY);
+        String cardName = intent.getStringExtra(CARD_KEY);
 
         Gson gson = new GsonBuilder()
                 .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
@@ -45,11 +46,11 @@ public class CardDetailsActivity extends AppCompatActivity {
             public void onResponse(Call<CardDetails> call, Response<CardDetails> response) {
                 if (response.isSuccessful()) {
                     CardDetails cardDetails = response.body();
-                    TextView cardDetailNameTextView = findViewById(R.id.card_detail_name);
-                    cardDetailNameTextView.setText(cardDetails.name);
-                    if (cardDetails.flavorTextEntries != null && !cardDetails.flavorTextEntries.isEmpty()) {
-                        TextView cardDetailDescriptionTextView = findViewById(R.id.card_detail_description);
-                        cardDetailDescriptionTextView.setText(cardDetails.flavorTextEntries.get(0).flavorText);
+                    TextView cardDetailName = findViewById(R.id.card_detail_name);
+                    TextView cardDetailDescription = findViewById(R.id.card_detail_description);
+                    if(cardDetails.name!=null&&cardDetails.text!=null) {
+                        cardDetailName.setText(cardDetails.name);
+                        cardDetailDescription.setText(cardDetails.text);
                     }
                 } else {
                     Log.e(TAG, response.errorBody().toString());

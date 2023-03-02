@@ -4,25 +4,36 @@ import java.net.URI;
 import java.util.List;
 
 public class CardDetails {
-    public class FlavorTextEntry {
 
-        public class Language {
             public String name;
-            public URI url;
-        }
+            public String imageUrl;
+            public String type;
+            public String text;
+            public String rarity;
+            public String setName;
+            public String power;
+            public String toughness;
+            public String manaCost;
+            public String number;
+            public String id;
 
-        public class Version {
-            public String name;
-            public URI url;
-        }
 
-        //@SerializedName("flavor_text") commented coz we're setting the proper FieldNamingPolicy in the builder
-        public String flavorText;
-        public Language language;
-        public Version version;
-    }
+            public CardDetails(String name, String imageUrl, String type, String text, String rarity,
+                              String setName, String power, String toughness, String manaCost, String number, String id) {
+                this.name = name;
+                this.imageUrl = imageUrl;
+                this.type = type;
+                this.text = text;
+                this.rarity = rarity;
+                this.setName = setName;
+                this.power = power;
+                this.toughness = toughness;
+                this.manaCost=manaCost;
+                this.number = number;
+                this.id = id;
+            }
 
-    public String name;
+
     //@SerializedName("flavor_text_entries") commented coz we're setting the proper FieldNamingPolicy in the builder
-    public List<FlavorTextEntry> flavorTextEntries;
+    public Card _card;
 }

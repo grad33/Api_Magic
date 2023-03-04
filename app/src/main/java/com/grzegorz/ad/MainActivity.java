@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             public void onCardClick(Card card) {
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, CardDetailsActivity.class);
-                intent.putExtra(CardDetailsActivity.CARD_KEY, card.getId());
+                intent.putExtra(CardDetailsActivity.CARD_KEY, card.id);
                 startActivity(intent);
             }
 

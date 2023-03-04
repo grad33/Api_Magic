@@ -8,16 +8,18 @@ public class Card{
     public String id;
     public String name;
     public String imageUrl;
+    public String text;
+    public String rarity;
 
-    public String getId(){
-        return id;
-    }
+
     @Override
     public String toString() {
         return "Card{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
+                ", text='" + text + '\'' +
+                ", rarity='" + rarity + '\'' +
                 '}';
     }
 }

@@ -4,33 +4,158 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#373737"
     tools:context=".CardDetailsActivity">
 
     <TextView
-        android:id="@+id/card_detail_name"
+        android:id="@+id/card_detail_set"
+        style="@style/rare"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toEndOf="@+id/card_img"
+        app:layout_constraintTop_toBottomOf="@+id/card_detail_toughness" />
+
+    <TextView
+        android:id="@+id/loading"
+        style="@style/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="10dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="TextView"
+        android:text="LOADING..."
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_img"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <TextView
+        android:id="@+id/card_detail_name"
+        style="@style/nombre"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="5dp"
+        android:text=""
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/card_detail_description"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_img"
+        app:layout_constraintVertical_bias="0.961" />
+
+    <TextView
+        android:id="@+id/manaCost"
+        style="@style/rare"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:text="Mana Cost:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toEndOf="@+id/card_img"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/card_detail_description"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:id="@+id/card_manaCost"
+        style="@style/rare"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
-        android:text="TextView"
-        android:textAlignment="center"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toEndOf="@+id/card_img"
+        app:layout_constraintTop_toBottomOf="@+id/manaCost" />
+
+    <TextView
+        android:id="@+id/power"
+        style="@style/rare"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="Power:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toEndOf="@+id/card_img"
+        app:layout_constraintTop_toBottomOf="@+id/card_manaCost" />
+
+    <TextView
+        android:id="@+id/card_detail_power"
+        style="@style/rare"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toEndOf="@+id/card_img"
+        app:layout_constraintTop_toBottomOf="@+id/power" />
+
+    <TextView
+        android:id="@+id/toughness"
+        style="@style/rare"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="Toughness:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toEndOf="@+id/card_img"
+        app:layout_constraintTop_toBottomOf="@+id/card_detail_power" />
+
+    <TextView
+        android:id="@+id/card_detail_toughness"
+        style="@style/rare"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toEndOf="@+id/card_img"
+        app:layout_constraintTop_toBottomOf="@+id/toughness" />
+
+    <TextView
+        android:id="@+id/card_detail_description"
+        style="@style/rare"
+        android:layout_width="391dp"
+        android:layout_height="307dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_detail_name" />
+        app:layout_constraintTop_toBottomOf="@+id/card_detail_name"
+        app:layout_constraintVertical_bias="0.964" />
+
+    <ImageView
+        android:id="@+id/card_img"
+        android:layout_width="252dp"
+        android:layout_height="333dp"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/amogus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

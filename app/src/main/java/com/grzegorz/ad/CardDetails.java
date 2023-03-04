@@ -5,35 +5,37 @@ import java.util.List;
 
 public class CardDetails {
 
-            public String name;
-            public String imageUrl;
-            public String type;
-            public String text;
-            public String rarity;
-            public String setName;
-            public String power;
-            public String toughness;
-            public String manaCost;
-            public String number;
-            public String id;
+    public class Card {
+
+        public String name;
+        public String imageUrl;
+        public String type;
+        public String text;
+        public String rarity;
+        public String setName;
+        public String power;
+        public String toughness;
+        public String manaCost;
+        public String number;
+        public String id;
 
 
-            public CardDetails(String name, String imageUrl, String type, String text, String rarity,
-                              String setName, String power, String toughness, String manaCost, String number, String id) {
-                this.name = name;
-                this.imageUrl = imageUrl;
-                this.type = type;
-                this.text = text;
-                this.rarity = rarity;
-                this.setName = setName;
-                this.power = power;
-                this.toughness = toughness;
-                this.manaCost=manaCost;
-                this.number = number;
-                this.id = id;
-            }
-
+        public Card(String name, String imageUrl, String type, String text, String rarity,
+                           String setName, String power, String toughness, String manaCost, String number, String id) {
+            this.name = name;
+            this.imageUrl = imageUrl;
+            this.type = type;
+            this.text = text;
+            this.rarity = rarity;
+            this.setName = setName;
+            this.power = power;
+            this.toughness = toughness;
+            this.manaCost = manaCost;
+            this.number = number;
+            this.id = id;
+        }
+    }
 
     //@SerializedName("flavor_text_entries") commented coz we're setting the proper FieldNamingPolicy in the builder
-    public Card _card;
+    public Card card;
 }

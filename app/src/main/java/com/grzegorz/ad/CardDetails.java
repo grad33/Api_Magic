@@ -15,13 +15,13 @@ public class CardDetails {
         public String setName;
         public String power;
         public String toughness;
-        public String manaCost;
+        public String cmc;
         public String number;
         public String id;
 
 
         public Card(String name, String imageUrl, String type, String text, String rarity,
-                           String setName, String power, String toughness, String manaCost, String number, String id) {
+                           String setName, String power, String toughness, String cmc, String number, String id) {
             this.name = name;
             this.imageUrl = imageUrl;
             this.type = type;
@@ -30,7 +30,7 @@ public class CardDetails {
             this.setName = setName;
             this.power = power;
             this.toughness = toughness;
-            this.manaCost = manaCost;
+            this.cmc = cmc;
             this.number = number;
             this.id = id;
         }

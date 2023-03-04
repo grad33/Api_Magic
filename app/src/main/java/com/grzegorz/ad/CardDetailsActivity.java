@@ -64,7 +64,7 @@ public class CardDetailsActivity extends AppCompatActivity {
                     TextView cardDetailDescription = findViewById(R.id.card_detail_description);
                     ImageView cardDetailUrl=findViewById(R.id.card_img);
                     if(cardDetails.card.name!=null&&cardDetails.card.text!=null) {
-                        cardDetailMana.setText(cardDetails.card.manaCost);
+                        cardDetailMana.setText(cardDetails.card.cmc);
                         cardDetailPower.setText(cardDetails.card.power);
                         cardDetailToughness.setText(cardDetails.card.toughness);
                         cardDetailSet.setText(cardDetails.card.setName);

@@ -1,15 +1,6 @@
-# ApiMagicFrikiCasa
+# Api_Magic
 
-Practica realizada unicamente por Grzegorz Artur Dryka
-
-*Problemas*
-
-Inicial: no conseguia arrancar
-
-1.1:inica pero no mostrar nada(menu vacio)
-
-1.2:inicia y muestra rows(no funcionan detalles aun)
-
-1.3:Logo y poco mas
-
-1.4:practicamente se puede llamar app
+Proyecto con el objetivo de creacion de una App para Android
+con la cual poder obtener gran cantidad de informacion
+para luego poder consultar, filtrar, buscar cartas
+del popular juego de cartas "Magic the Gathering".

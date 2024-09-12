@@ -1,0 +1,12 @@
+
+*Logros por version*
+
+1.0: Aplicacion inicia, pero aun no carga datos de la api
+
+1.1: Los datos son extraidos correctamente pero no se muestras
+
+1.2: Ya se pueden ver correctamente los datos (aun no funcionan los detalles)
+
+1.3: Los detalles se pueden ver
+
+1.4: Logo y ajustes visulaes responsive
